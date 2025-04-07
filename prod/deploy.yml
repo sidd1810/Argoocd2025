@@ -1,17 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  creationTimestamp: null
   labels:
     app: lwweb
   name: lwweb
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: lwweb
   strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: lwweb
     spec:
