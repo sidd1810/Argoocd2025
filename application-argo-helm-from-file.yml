@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lwapphelm1
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc 
+    namespace: default
+  source:
+    helm:
+      releaseName: lwapphelm
+    repoURL: https://github.com/sidd1810/Argoocd2025.git
+    path: prod/myhelcharts/lwchart
+    targetRevision: Clones
+
